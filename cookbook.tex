@@ -1,0 +1,123 @@
+\documentclass[a4paper, ngerman]{article}
+\usepackage[utf8]{inputenc} % this is needed for umlauts
+\usepackage{babel} % this is needed for umlauts
+\usepackage[T1]{fontenc}    % this is needed for correct output of umlauts in pdf
+\usepackage{siunitx}
+\sisetup{locale=DE, range-units=single}
+\usepackage[margin=3cm]{geometry}
+\usepackage{xurl}
+\usepackage{cleveref} % https://ftp.mpi-inf.mpg.de/pub/tex/mirror/ftp.dante.de/pub/tex/macros/latex/contrib/cleveref/cleveref.pdf
+\crefname{r@cipenumber}{Rezept}{Rezepte}
+\usepackage{cuisine} % https://ftp.fau.de/ctan/macros/latex/contrib/cuisine/cuisine.pdf
+\usepackage{microtype}
+\RecipeWidths{\textwidth}{3cm}{0.5cm}{2.5cm}{1cm}{1.5cm}
+
+\renewcommand*{\recipetitlefont}{\large\bfseries\sffamily}
+\renewcommand*{\recipenumberfont}{\large\bfseries\sffamily}
+\renewcommand*{\recipequantityfont}{\sffamily\bfseries}
+\renewcommand*{\recipeunitfont}{\sffamily}
+\renewcommand*{\recipeingredientfont}{\sffamily}
+\renewcommand*{\recipefreeformfont}{\itshape}
+
+\begin{document}
+\section{Ravioli und Tortellini mit diversen Füllungen}
+Pasta selber zu machen ist meistens gar nicht so einfach, obwohl es toll aussieht und auch viel leckerer ist als die Teigware aus der Tüte. Häufig braucht man aber extra eine Nudelmaschine und einen sehr langen Atem und viel Geduld.
+
+Es gibt allerdings auch zwei italienische Nudelteig-Spezialitäten, die ganz einfach und im Handumdrehen selber gemacht werden können: Ravioli und Tortellini. Diese beiden haben sogar noch die Besonderheit, dass sie gefüllt werden und so keiner großen Soßenkünste mehr bedürfen. So machen Sie Ravioli und Tortellini ganz einfach selber.\footnote{Für Sie - \textit{zeit für mich}: \url{https://www.fuersie.de/kochen/rezeptideen/artikel/ravioli-selber-machen-anleitung-und-rezept}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{recipe}[rec:ravioli/teig]{Grundrezept für Ravioli/Tortellini}{4 Personen}{\SI{30}{\minute}}
+    \freeform Mit einem einfachen Rezept für den Teig können Sie sowohl Ravioli als auch Tortellini einfach selber machen. Der Unterschied liegt ausschließlich in der Form der Teigtasche. Während Ravioli meist rechteckig, dreieckig oder mondförmig mit gezacktem Rand sind, zeichnen sich Tortellini durch ihre runde Form aus.
+
+    \ing[400]{g}{Mehl}
+    \ing[4]{}{Eier (groß)}
+    \ing[ ]{Prise}{Salz}
+    Alle Zutaten miteinander verkneten und \SI{30}{\minute} zugedeckt ruhen lassen.
+    \freeform\hrulefill
+\end{recipe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{recipe}[rec:fuellung/ricotta]{Ricotta-Füllung}{}{}
+    \freeform Das Wichtigste bei selbstgemachten Ravioli und Tortellini ist die Füllung. Gut geeignet dafür ist Gemüse, Spinat, Fleisch und Käse (zum Beispiel Ricotta, Parmesan und Mozzarella).
+
+    \ing[1]{gr. Bund}{Basilikum}
+    \ing[\fr{1}{2}]{}{Zitrone}
+    \ing[300]{g}{Ricotta}
+    \ing[125]{g}{Parmesan, gerieben}
+    \ing[1]{}{Ei}
+    Basilikum waschen, trockenen und fein hacken. Die Schale der halben Bio-Zitrone abreiben. Ricotta, Parmesan und das Ei miteinander verrühren und Basilikum, sowie Zitrone unterheben. Füllung mit Salz und Pfeffer abschmecken.
+
+    \newstep
+    Jetzt kann der Teig (\cref{rec:ravioli/teig}) portionsweise auf einer bemehlten Fläche ausgerollt werden. Mit einer Nudel-Ausstechform oder einem Glas mit einem Durchmesser von ungefähr fünf Zentimetern können Sie jetzt Kreise ausstechen. Geben Sie nun einen Teelöffel der Ricotta-Füllung in die Mitte der Teig-Plätzchen und klappen Sie den Kreis zusammen.
+
+    Für die Ravioli drücken Sie die Ränder nun mit der Spitze einer Gabel so fest, dass das Muster der Gabel sich im Teig abdrückt. Für Tortellini können Sie die Teigränder einfach mit den Fingern zusammendrücken.
+
+    Danach nehmen Sie die beiden Ränder und ziehen Sie zusammen, sodass ein Tortellini geformt wird und drücken Sie die Ränder einfach wieder zusammen.
+
+    \newstep
+    Die Teigtaschen werden für \SI{3}{\minute} in kochendes Salzwasser gegeben und können dann verzehrt werden.
+    \freeform\hrulefill
+\end{recipe}
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{recipe}[rec:fuellung/pilz]{Pilzfüllung}{}{}
+    \ing[100]{g}{Egerlinge oder Champignons}
+    \ing[10]{g}{Steinpilze, getrocknet}
+    \ing[125]{g}{Ricotta}
+    \ing[1]{}{Eigelb}
+    \ing[3]{Zweige}{Petersilie, glatt}
+    \ing[1]{}{Schalotte}
+    \ing[1]{}{Knoblauchzehe}
+    \ing[]{}{Pfeffer \& Salz}
+    Pilze, Petersilie, Schalotte und Knoblauch klein schneiden und mit den restlichen Zutaten vermengen, bis eine feste, grobe Masse entsteht.
+
+    \newstep
+    Teigtaschen wie in \cref{rec:fuellung/ricotta} weiterverarbeiten.
+    \freeform\hrulefill
+\end{recipe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{recipe}[rec:fuellung/mozzarella]{Füllung mit Mozzarella, getrockneten Tomaten und Rucola}{}{}
+    \ing[250]{g}{Mozzarella}
+    \ing[250]{g}{Tomaten, getrocknet}
+    \ing[1]{Bund}{Rucola}
+    \ing[1]{Handvoll}{Parmesan}
+    \ing[]{}{Butter}
+    \ing[]{}{Pfeffer \& Salz}
+    Mozzarella, Tomaten und Rucola klein schneiden, Parmesan und etwas Olivenöl hinzugeben. Alles mit einer Gabel vermengen und zerdrücken, bis eine grobe, feste Masse entsteht. Mit Salz und Pfeffer abschmecken.
+
+    \newstep
+    Teigtaschen wie in \cref{rec:fuellung/ricotta} weiterverarbeiten.
+    \freeform\hrulefill
+\end{recipe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{recipe}[rec:fuellung/kuerbis]{Kürbisfüllung}{}{}
+    \ing[400]{g}{Hokkaidokürbis}
+    \ing[1]{}{Schalotte}
+    \ing[1]{EL}{Rapsöl}
+    \ing[200]{ml}{Gemüsebrühe}
+    \ing[1]{}{Eigelb}
+    \ing[25]{g}{Parmesan}
+    \ing[1]{Prise}{Muskat}
+    \ing[]{}{Pfeffer \& Salz}
+    Kürbis waschen, zerteilen, entkernen und in grobe Würfel schneiden.
+
+    Die Schalotte fein würfeln und in einem Topf für circa \SI{3}{\minute} anbraten.
+
+    Kürbisstücke hinzugeben und für weitere \SI{5}{\minute} mit anbraten.
+
+    Mit der Brühe ablöschen und alles ca. \SIrange{10}{15}{\minute} köcheln lassen, bis der Kürbis weich ist.
+
+    Die Hälfte der Brühe abgießen, die Mischung pürieren – die Masse soll cremig sein.
+
+    Eigelb und  den Parmesan unter die nicht mehr kochende Masse rühren und mit Muskat, Salz und Pfeffer abschmecken.
+
+    Füllung verteilen und Ravioli fertig garen. Dazu schmecken Kürbiskerne.
+
+    \newstep
+    Teigtaschen wie in \cref{rec:fuellung/ricotta} weiterverarbeiten.
+    \freeform\hrulefill
+\end{recipe}
+\end{document}
