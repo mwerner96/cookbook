@@ -19,6 +19,9 @@
 \renewcommand*{\recipeingredientfont}{\sffamily}
 \renewcommand*{\recipefreeformfont}{\itshape}
 
+\usepackage[style=alphabetic,style=verbose-ibid,backend=bibtex]{biblatex}
+\addbibresource{references.bib}
+
 \begin{document}
 \tableofcontents
 \clearpage
@@ -30,4 +33,10 @@
 \ResetRecipeCounter
 \input{rec/pastinaken-mandel-suppe.tex}
 \clearpage
+
+% \phantomsection
+% \addcontentsline{toc}{section}{Quellen}%
+% \sectionmark{Quellen}
+\printbibliography
+
 \end{document}
